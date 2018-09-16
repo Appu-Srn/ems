@@ -1,0 +1,18 @@
+{%  extends 'base.html' %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+{% block content %}
+<p> Them Polls {{ title }}</p>
+    {% if questions %}
+        <ul>
+        {% for question in questions %}
+            <li><a href="{% url 'poll_details' question.id %}" >{{ question.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no ques</p>
+    {% endif %}
+{% endblock content %}

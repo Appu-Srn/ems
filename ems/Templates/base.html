@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        Employee Management System
+    </title>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+{% include 'header.html' %}
+<div class="container">
+<h1>Employee Management System</h1>
+{% block content %}
+
+{% endblock content %}
+</div>
+</body>
+</html>
